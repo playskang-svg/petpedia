@@ -1,0 +1,6 @@
+{
+  "name": "펫피디아 - 강아지·고양이 품종 백과 & 맞춤 놀이 가이드",
+  "description": "강아지 견종과 고양이 묘종별 성격, 털 빠짐, 건강 특징부터 스트레스를 해소하는 올바른 놀아주는 법까지 총망라한 반응형 반려동물 백과사전입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
