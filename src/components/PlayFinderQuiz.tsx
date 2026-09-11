@@ -137,7 +137,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
           <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight mb-2">
             우리 아이 맞춤 놀이 찾기 (30초 진단)
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600">
+          <p className="text-sm sm:text-base text-stone-600">
             아이의 종과 기질, 현재 집안 환경에 딱 맞춘 수의 행동학 솔루션을 즉시 처방해 드립니다.
           </p>
         </div>
@@ -207,7 +207,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
                         <Icon className="w-4 h-4 text-amber-600" />
                         {item.label}
                       </div>
-                      <p className="text-[11px] text-stone-500 leading-tight">{item.desc}</p>
+                      <p className="text-xs text-stone-500 leading-tight">{item.desc}</p>
                     </div>
                   );
                 })}
@@ -238,7 +238,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
                       }`}
                     >
                       <div className="font-bold text-xs sm:text-sm mb-0.5">{sit.label}</div>
-                      <p className="text-[11px] text-stone-500 leading-tight">{sit.desc}</p>
+                      <p className="text-xs text-stone-500 leading-tight">{sit.desc}</p>
                     </div>
                   );
                 })}
@@ -250,7 +250,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
               id="quiz-submit-diagnose-btn"
               type="button"
               onClick={handleDiagnose}
-              className="w-full py-3.5 px-6 bg-linear-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-sm sm:text-base rounded-xl shadow-md shadow-orange-200 flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-98"
+              className="w-full py-3.5 px-6 bg-linear-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-sm sm:text-base rounded-xl shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-98"
             >
               <Award className="w-5 h-5" />
               맞춤 놀이 솔루션 처방받기
@@ -261,7 +261,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
           <div className="bg-white rounded-3xl p-5 sm:p-8 border-2 border-orange-300 shadow-lg space-y-5 animate-in fade-in duration-300">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200 pb-4">
               <div>
-                <span className="text-[11px] font-bold text-orange-600 uppercase tracking-wider block">
+                <span className="text-xs font-bold text-orange-600 uppercase tracking-wider block">
                   PetPedia Behavioral Rx
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-stone-900">
@@ -289,7 +289,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
             </div>
 
             {/* Why it works */}
-            <div className="p-4 bg-stone-50 rounded-2xl border border-stone-200 text-xs sm:text-sm text-stone-700">
+            <div className="p-4 bg-stone-50 rounded-2xl border border-stone-200 text-sm sm:text-base text-stone-700">
               <span className="font-bold text-stone-900 block mb-1">
                 🧠 행동학적 처방 이유
               </span>
@@ -306,7 +306,7 @@ export const PlayFinderQuiz: React.FC<PlayFinderQuizProps> = () => {
                 {prescription.steps.map((step, idx) => (
                   <div
                     key={idx}
-                    className="p-3 rounded-xl bg-amber-50/50 border border-amber-100 text-xs sm:text-sm text-stone-800 flex items-start gap-2.5"
+                    className="p-3 rounded-xl bg-amber-50/50 border border-amber-100 text-sm text-stone-800 flex items-start gap-2.5"
                   >
                     <span className="w-5 h-5 rounded-full bg-orange-500 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {idx + 1}

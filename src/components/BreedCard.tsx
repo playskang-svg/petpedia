@@ -53,7 +53,7 @@ export const BreedCard: React.FC<BreedCardProps> = ({
         {/* Top Badges */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
           <span
-            className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full shadow-xs backdrop-blur-md ${
+            className={`inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full shadow-xs backdrop-blur-md ${
               breed.species === 'dog'
                 ? 'bg-amber-500/95 text-white'
                 : 'bg-orange-500/95 text-white'
@@ -69,10 +69,10 @@ export const BreedCard: React.FC<BreedCardProps> = ({
               </>
             )}
           </span>
-          <span className="text-[11px] font-medium px-2 py-1 rounded-full bg-stone-900/60 text-white backdrop-blur-md">
+          <span className="text-xs font-medium px-2 py-1 rounded-full bg-stone-900/60 text-white backdrop-blur-md">
             {breed.size}형
           </span>
-          <span className="text-[11px] font-medium px-2 py-1 rounded-full bg-stone-900/60 text-white backdrop-blur-md">
+          <span className="text-xs font-medium px-2 py-1 rounded-full bg-stone-900/60 text-white backdrop-blur-md">
             {breed.coatType}
           </span>
         </div>
@@ -95,7 +95,7 @@ export const BreedCard: React.FC<BreedCardProps> = ({
         </button>
 
         {/* Bottom overlay indicators */}
-        <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] text-white/90 drop-shadow-md">
+        <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-xs text-white/90 drop-shadow-md">
           <span>체중 {breed.averageWeight}</span>
           <span>수명 {breed.lifespan}</span>
         </div>
@@ -116,12 +116,12 @@ export const BreedCard: React.FC<BreedCardProps> = ({
             "{breed.tagline}"
           </p>
 
-          <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed mb-4">
+          <p className="text-sm text-stone-600 line-clamp-2 leading-relaxed mb-4">
             {breed.summary}
           </p>
 
           {/* Quick Trait Meters */}
-          <div className="grid grid-cols-3 gap-2 py-2.5 px-3 bg-stone-50 rounded-xl mb-4 text-[11px]">
+          <div className="grid grid-cols-3 gap-2 py-2.5 px-3 bg-stone-50 rounded-xl mb-4 text-xs">
             <div>
               <span className="text-stone-500 flex items-center gap-1 mb-1">
                 <Zap className="w-3 h-3 text-amber-500" /> 활동량
@@ -173,7 +173,7 @@ export const BreedCard: React.FC<BreedCardProps> = ({
 
           {/* Play Highlight Teaser with Quick Toy Button */}
           <div className="bg-amber-50/70 border border-amber-150 rounded-xl p-2.5 mb-3">
-            <div className="text-[11px] font-bold text-amber-900 mb-1 flex items-center justify-between">
+            <div className="text-xs font-bold text-amber-900 mb-1 flex items-center justify-between">
               <span>🎯 추천 놀이법</span>
               <span className="font-normal text-stone-500">{breed.play.recommendedTime}</span>
             </div>
@@ -190,7 +190,7 @@ export const BreedCard: React.FC<BreedCardProps> = ({
                     e.stopPropagation();
                     onOpenToyModal(breed);
                   }}
-                  className="flex-1 py-1 px-2 rounded-lg bg-white hover:bg-orange-100 text-orange-700 font-bold text-[11px] border border-orange-200/80 flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-2xs"
+                  className="flex-1 py-1 px-2 rounded-lg bg-white hover:bg-orange-100 text-orange-700 font-bold text-xs border border-orange-200/80 flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-2xs"
                   title={`${breed.nameKo} 맞춤 장난감 보러가기`}
                 >
                   <Gamepad2 className="w-3 h-3 text-orange-600" />
@@ -204,7 +204,7 @@ export const BreedCard: React.FC<BreedCardProps> = ({
                     e.stopPropagation();
                     onOpenHealthModal(breed);
                   }}
-                  className="flex-1 py-1 px-2 rounded-lg bg-white hover:bg-teal-100 text-teal-800 font-bold text-[11px] border border-teal-200/80 flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-2xs"
+                  className="flex-1 py-1 px-2 rounded-lg bg-white hover:bg-teal-100 text-teal-800 font-bold text-xs border border-teal-200/80 flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-2xs"
                   title={`${breed.nameKo} 조심할 질환 & 영양제·유산균 추천`}
                 >
                   <Pill className="w-3 h-3 text-teal-600" />

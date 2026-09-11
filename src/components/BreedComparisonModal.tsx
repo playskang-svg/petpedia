@@ -65,7 +65,7 @@ export const BreedComparisonModal: React.FC<BreedComparisonModalProps> = ({
           <div className="grid grid-cols-2 gap-3 sm:gap-6 items-start">
             {/* Left selector */}
             <div className="bg-amber-50/50 p-3 sm:p-4 rounded-2xl border border-amber-200/80">
-              <label className="text-[11px] font-bold text-stone-500 block mb-1.5">
+              <label className="text-xs font-bold text-stone-500 block mb-1.5">
                 첫 번째 품종 선택
               </label>
               <select
@@ -97,13 +97,13 @@ export const BreedComparisonModal: React.FC<BreedComparisonModalProps> = ({
               </div>
               <div className="mt-2 text-center">
                 <div className="font-extrabold text-sm sm:text-base text-stone-900">{breedA.nameKo}</div>
-                <div className="text-[11px] text-stone-500">{breedA.size}형 / {breedA.coatType}모</div>
+                <div className="text-xs text-stone-500">{breedA.size}형 / {breedA.coatType}모</div>
               </div>
             </div>
 
             {/* Right selector */}
             <div className="bg-orange-50/50 p-3 sm:p-4 rounded-2xl border border-orange-200/80">
-              <label className="text-[11px] font-bold text-stone-500 block mb-1.5">
+              <label className="text-xs font-bold text-stone-500 block mb-1.5">
                 두 번째 품종 선택
               </label>
               <select
@@ -135,7 +135,7 @@ export const BreedComparisonModal: React.FC<BreedComparisonModalProps> = ({
               </div>
               <div className="mt-2 text-center">
                 <div className="font-extrabold text-sm sm:text-base text-stone-900">{breedB.nameKo}</div>
-                <div className="text-[11px] text-stone-500">{breedB.size}형 / {breedB.coatType}모</div>
+                <div className="text-xs text-stone-500">{breedB.size}형 / {breedB.coatType}모</div>
               </div>
             </div>
           </div>
@@ -192,15 +192,15 @@ export const BreedComparisonModal: React.FC<BreedComparisonModalProps> = ({
                 {breedA.nameKo} 놀이 프로필
               </span>
               <div>
-                <span className="text-[10px] text-stone-500 block">권장 놀이 시간</span>
+                <span className="text-xs text-stone-500 block">권장 놀이 시간</span>
                 <span className="font-semibold text-stone-800">{breedA.play.recommendedTime}</span>
               </div>
               <div>
-                <span className="text-[10px] text-stone-500 block">추천 놀이</span>
+                <span className="text-xs text-stone-500 block">추천 놀이</span>
                 <span className="font-medium text-stone-700">{breedA.play.title}</span>
               </div>
               <div>
-                <span className="text-[10px] text-stone-500 block">아파트 거주 추천</span>
+                <span className="text-xs text-stone-500 block">아파트 거주 추천</span>
                 <span className="font-bold text-stone-800">
                   {breedA.apartmentFriendly ? '적합 (실내 훈련 용이)' : '마당/야외 산책 필요'}
                 </span>
@@ -213,15 +213,15 @@ export const BreedComparisonModal: React.FC<BreedComparisonModalProps> = ({
                 {breedB.nameKo} 놀이 프로필
               </span>
               <div>
-                <span className="text-[10px] text-stone-500 block">권장 놀이 시간</span>
+                <span className="text-xs text-stone-500 block">권장 놀이 시간</span>
                 <span className="font-semibold text-stone-800">{breedB.play.recommendedTime}</span>
               </div>
               <div>
-                <span className="text-[10px] text-stone-500 block">추천 놀이</span>
+                <span className="text-xs text-stone-500 block">추천 놀이</span>
                 <span className="font-medium text-stone-700">{breedB.play.title}</span>
               </div>
               <div>
-                <span className="text-[10px] text-stone-500 block">아파트 거주 추천</span>
+                <span className="text-xs text-stone-500 block">아파트 거주 추천</span>
                 <span className="font-bold text-stone-800">
                   {breedB.apartmentFriendly ? '적합 (실내 훈련 용이)' : '마당/야외 산책 필요'}
                 </span>

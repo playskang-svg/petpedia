@@ -42,21 +42,21 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-5 py-4 bg-linear-to-r from-amber-500 via-orange-500 to-amber-600 text-white flex items-center justify-between shadow-xs">
+        <div className="px-5 py-4 bg-linear-to-r from-amber-100 via-orange-100 to-amber-200 text-stone-900 border-b border-amber-200/70 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <span className="p-2 bg-white/20 rounded-2xl backdrop-blur-xs">
-              <Gamepad2 className="w-5 h-5 text-white" />
+            <span className="p-2 bg-white/70 rounded-2xl backdrop-blur-xs">
+              <Gamepad2 className="w-5 h-5 text-amber-700" />
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-xl font-black tracking-tight">
+                <h2 className="text-lg sm:text-xl font-black tracking-tight text-stone-900">
                   {breed.nameKo} 맞춤 추천 장난감 컬렉션
                 </h2>
-                <span className="text-[11px] bg-white/25 px-2 py-0.5 rounded-full font-medium">
+                <span className="text-xs bg-white/70 text-amber-800 px-2 py-0.5 rounded-full font-medium">
                   {breed.species === 'dog' ? '반려견' : '반려묘'} · {breed.size}형
                 </span>
               </div>
-              <p className="text-xs text-amber-100 mt-0.5">
+              <p className="text-xs text-stone-700 mt-0.5">
                 턱 힘과 치아 안전, 놀이 흥미를 고려한 수의학적 큐레이션
               </p>
             </div>
@@ -64,7 +64,7 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
           <button
             id="toy-modal-close-btn"
             onClick={onClose}
-            className="p-2 rounded-full bg-black/10 hover:bg-black/20 text-white transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-white/60 hover:bg-white/90 text-stone-700 transition-colors cursor-pointer"
             aria-label="닫기"
           >
             <X className="w-5 h-5" />
@@ -76,7 +76,7 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
           {/* Quick Notice Banner */}
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-3.5 flex items-start gap-3">
             <Sparkles className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-            <div className="text-xs sm:text-sm text-stone-700">
+            <div className="text-sm text-stone-700">
               <strong className="text-stone-900 font-bold block mb-0.5">
                 {breed.nameKo}의 체형과 악력에 맞춘 장난감 선택 팁
               </strong>
@@ -99,10 +99,10 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-orange-100 text-orange-800">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-orange-100 text-orange-800">
                         {toy.category}
                       </span>
-                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
                         <ShieldCheck className="w-3 h-3" />
                         {toy.safetyRating}
                       </span>
@@ -114,7 +114,7 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-stone-50/80 p-3 rounded-xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm bg-stone-50/80 p-3 rounded-xl">
                   <div>
                     <span className="font-bold text-stone-900 block mb-0.5">💡 왜 이 품종에 최적인가요?</span>
                     <p className="text-stone-600 leading-relaxed">{toy.whyFit}</p>
@@ -127,7 +127,7 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
 
                 {/* Direct Search Actions */}
                 <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-stone-100">
-                  <span className="text-[11px] text-stone-500">
+                  <span className="text-xs text-stone-500">
                     추천 검색어: <strong>"{toy.searchKeyword}"</strong>
                   </span>
                   <div className="flex items-center gap-1.5">
@@ -166,7 +166,7 @@ export const ToyShowcaseModal: React.FC<ToyShowcaseModalProps> = ({
           {onOpenHealthModal && (
             <div className="bg-linear-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-[11px] font-bold text-emerald-700 block mb-0.5">
+                <span className="text-xs font-bold text-emerald-700 block mb-0.5">
                   건강까지 챙기는 원스톱 케어
                 </span>
                 <p className="text-xs sm:text-sm font-semibold text-stone-900">

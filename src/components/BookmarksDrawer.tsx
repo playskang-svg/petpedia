@@ -87,11 +87,11 @@ export const BookmarksDrawer: React.FC<BookmarksDrawerProps> = ({
                   <div className="min-w-0 flex-1">
                     <div className="font-bold text-xs sm:text-sm text-stone-900 truncate">
                       {breed.nameKo}{' '}
-                      <span className="text-[11px] text-stone-400 font-normal">
+                      <span className="text-xs text-stone-400 font-normal">
                         ({breed.nameEn})
                       </span>
                     </div>
-                    <p className="text-[11px] text-amber-800 truncate">{breed.play.title}</p>
+                    <p className="text-xs text-amber-800 truncate">{breed.play.title}</p>
                   </div>
                 </div>
 

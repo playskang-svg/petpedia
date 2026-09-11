@@ -64,7 +64,7 @@ export const SEOFAQSection: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight mb-2">
             반려동물 양육 & 놀이 핵심 궁금증
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600">
+          <p className="text-sm sm:text-base text-stone-600">
             초보 집사와 반려인을 위해 수의 행동학 원칙에 기반한 실전 답변을 모았습니다.
           </p>
         </div>
@@ -83,7 +83,7 @@ export const SEOFAQSection: React.FC = () => {
                   className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 cursor-pointer select-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-bold text-xs sm:text-sm text-stone-900 flex items-center gap-2">
+                  <span className="font-bold text-sm sm:text-base text-stone-900 flex items-center gap-2">
                     <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-800 text-xs font-black flex items-center justify-center shrink-0">
                       Q
                     </span>
@@ -97,7 +97,7 @@ export const SEOFAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100 bg-stone-50/50">
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-sm sm:text-base text-stone-600 leading-relaxed border-t border-stone-100 bg-stone-50/50">
                     <p className="pt-3">{faq.answer}</p>
                   </div>
                 )}

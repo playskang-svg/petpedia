@@ -91,21 +91,21 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="px-5 py-4 bg-linear-to-r from-teal-700 via-emerald-700 to-teal-800 text-white flex items-center justify-between shadow-xs">
+        <div className="px-5 py-4 bg-linear-to-r from-teal-50 via-emerald-50 to-teal-100 text-stone-900 border-b border-teal-200/70 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <span className="p-2 bg-white/15 rounded-2xl backdrop-blur-xs">
-              <ShieldAlert className="w-5 h-5 text-teal-200" />
+            <span className="p-2 bg-white/70 rounded-2xl backdrop-blur-xs">
+              <ShieldAlert className="w-5 h-5 text-teal-700" />
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-xl font-black tracking-tight">
+                <h2 className="text-lg sm:text-xl font-black tracking-tight text-stone-900">
                   {breed.nameKo} 건강 관리 & 질환 솔루션 처방전
                 </h2>
-                <span className="text-[11px] bg-white/20 px-2 py-0.5 rounded-full font-medium">
+                <span className="text-xs bg-white/70 text-teal-800 px-2 py-0.5 rounded-full font-medium">
                   {breed.species === 'dog' ? '반려견' : '반려묘'}
                 </span>
               </div>
-              <p className="text-xs text-teal-100 mt-0.5">
+              <p className="text-xs text-stone-700 mt-0.5">
                 피부 · 눈 · 장 · 관절 취약점 분석 및 수의학 케어 솔루션
               </p>
             </div>
@@ -115,7 +115,7 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
             <button
               id="health-modal-quick-scroll-btn"
               onClick={scrollToSupplements}
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold bg-amber-400 hover:bg-amber-300 text-stone-900 px-3 py-1.5 rounded-xl shadow-xs transition-colors cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold bg-stone-900 hover:bg-stone-800 text-white px-3 py-1.5 rounded-xl shadow-xs transition-colors cursor-pointer"
             >
               <Pill className="w-3.5 h-3.5" />
               <span>영양제·유산균 추천 바로가기</span>
@@ -125,7 +125,7 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
             <button
               id="health-modal-close-btn"
               onClick={onClose}
-              className="p-2 rounded-full bg-black/15 hover:bg-black/25 text-white transition-colors cursor-pointer"
+              className="p-2 rounded-full bg-white/60 hover:bg-white/90 text-stone-700 transition-colors cursor-pointer"
               aria-label="닫기"
             >
               <X className="w-5 h-5" />
@@ -173,14 +173,14 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
                       <span className="font-bold text-stone-900 text-sm">{vp.title}</span>
                     </div>
                     <span
-                      className={`text-[11px] font-bold px-2 py-0.5 rounded-md border ${getRiskBadge(
+                      className={`text-xs font-bold px-2 py-0.5 rounded-md border ${getRiskBadge(
                         vp.riskLevel
                       )}`}
                     >
                       {vp.riskLevel}
                     </span>
                   </div>
-                  <p className="text-xs text-stone-600 leading-relaxed pl-1">{vp.description}</p>
+                  <p className="text-sm text-stone-600 leading-relaxed pl-1">{vp.description}</p>
                 </div>
               ))}
             </div>
@@ -207,13 +207,13 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
                       <span className="w-2 h-2 rounded-full bg-rose-500" />
                       <h4 className="text-sm sm:text-base font-bold text-stone-900">{dis.name}</h4>
                     </div>
-                    <span className="text-[11px] text-rose-700 bg-rose-50 font-semibold px-2.5 py-0.5 rounded-full">
+                    <span className="text-xs text-rose-700 bg-rose-50 font-semibold px-2.5 py-0.5 rounded-full">
                       주의 질환
                     </span>
                   </div>
 
                   {/* Why Vulnerable */}
-                  <div className="text-xs sm:text-sm text-stone-700 bg-stone-50 p-3 rounded-xl">
+                  <div className="text-sm text-stone-700 bg-stone-50 p-3 rounded-xl">
                     <span className="font-bold text-stone-900 block mb-1">
                       🔍 왜 이 질병에 취약한가요? (원인 설명)
                     </span>
@@ -287,21 +287,21 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
             id="supplements-section"
             className="pt-4 border-t-2 border-dashed border-teal-200 space-y-4"
           >
-            <div className="bg-linear-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-4 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
+            <div className="bg-linear-to-r from-amber-100 via-orange-100 to-amber-200 border border-amber-200/70 rounded-2xl p-4 text-stone-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
               <div>
-                <span className="text-[11px] uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-md font-bold">
+                <span className="text-xs uppercase tracking-wider bg-white/70 text-amber-800 px-2 py-0.5 rounded-md font-bold">
                   Targeted Nutrition Prescription
                 </span>
-                <h3 className="text-base sm:text-lg font-black tracking-tight mt-1 flex items-center gap-1.5">
-                  <Pill className="w-5 h-5 text-amber-200" />
+                <h3 className="text-base sm:text-lg font-black tracking-tight mt-1 flex items-center gap-1.5 text-stone-900">
+                  <Pill className="w-5 h-5 text-amber-700" />
                   {breed.nameKo}에게 효과 좋은 맞춤 영양제 & 유산균 추천
                 </h3>
-                <p className="text-xs text-amber-100 mt-0.5">
+                <p className="text-xs text-stone-700 mt-0.5">
                   취약 부위(장, 피부, 관절, 눈)를 집중 보강하는 필수 성분과 바로가기
                 </p>
               </div>
 
-              <div className="bg-stone-900/40 px-3 py-1.5 rounded-xl text-xs backdrop-blur-xs shrink-0 font-medium">
+              <div className="bg-white/70 text-stone-700 px-3 py-1.5 rounded-xl text-xs backdrop-blur-xs shrink-0 font-medium border border-amber-200/60">
                 수의학 성분 기준 검증 완료
               </div>
             </div>
@@ -329,7 +329,7 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
 
                   {/* Key Ingredients Badges */}
                   <div>
-                    <span className="text-[11px] font-bold text-stone-500 block mb-1">
+                    <span className="text-xs font-bold text-stone-500 block mb-1">
                       핵심 유효 성분:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -395,7 +395,7 @@ export const HealthCareModal: React.FC<HealthCareModalProps> = ({
           {onOpenToyModal && (
             <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <span className="text-[11px] font-bold text-orange-700 block mb-0.5">
+                <span className="text-xs font-bold text-orange-700 block mb-0.5">
                   관절과 치아를 보호하는 안전한 놀이
                 </span>
                 <p className="text-xs sm:text-sm font-semibold text-stone-900">
