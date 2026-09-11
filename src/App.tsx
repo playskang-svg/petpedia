@@ -151,42 +151,42 @@ export default function App() {
         </nav>
 
         {/* HERO BANNER (SEO H1 with rich subtitle) */}
-        <section className="bg-linear-to-br from-amber-500 via-orange-500 to-amber-600 rounded-3xl p-6 sm:p-10 text-white shadow-lg mb-8 relative overflow-hidden">
+        <section className="bg-linear-to-br from-amber-100 via-orange-100 to-amber-200 border border-amber-200/70 rounded-3xl p-6 sm:p-10 text-stone-900 shadow-sm mb-8 relative overflow-hidden">
           {/* Subtle background decoration */}
-          <PawPrint className="absolute -right-8 -bottom-8 w-48 h-48 text-white/10 rotate-12 pointer-events-none" />
-          <PawPrint className="absolute -left-6 -top-6 w-36 h-36 text-white/10 -rotate-12 pointer-events-none" />
+          <PawPrint className="absolute -right-8 -bottom-8 w-48 h-48 text-amber-900/[0.06] rotate-12 pointer-events-none" />
+          <PawPrint className="absolute -left-6 -top-6 w-36 h-36 text-amber-900/[0.06] -rotate-12 pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/70 text-amber-800 backdrop-blur-md mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               수의 행동학 검증 품종 백과 & 놀이 포털
             </div>
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-3">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-3 text-stone-900">
               강아지·고양이 품종 백과와<br className="hidden sm:inline" /> 맞춤 놀아주는 법
             </h1>
 
-            <p className="text-xs sm:text-sm md:text-base text-amber-50 leading-relaxed max-w-2xl mb-6">
+            <p className="text-sm sm:text-base text-stone-700 leading-relaxed max-w-2xl mb-6">
               인기 견종과 묘종의 <strong>성격, 털 빠짐, 유전병 특징</strong>부터 스트레스와 문제 행동을 예방하는 <strong>터그놀이, 노즈워크, 사냥놀이 4단계</strong>까지 완벽하게 정리했습니다.
             </p>
 
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-w-2xl text-xs">
-              <div className="bg-white/15 backdrop-blur-xs rounded-xl p-2.5 border border-white/20 text-center">
-                <span className="block font-black text-lg sm:text-xl">12대</span>
-                <span className="text-white/80 text-[11px]">인기 강아지 견종</span>
+              <div className="bg-white/70 backdrop-blur-xs rounded-xl p-2.5 border border-amber-200/60 text-center">
+                <span className="block font-black text-lg sm:text-xl text-stone-900">12대</span>
+                <span className="text-stone-600 text-xs">인기 강아지 견종</span>
               </div>
-              <div className="bg-white/15 backdrop-blur-xs rounded-xl p-2.5 border border-white/20 text-center">
-                <span className="block font-black text-lg sm:text-xl">12대</span>
-                <span className="text-white/80 text-[11px]">대표 고양이 묘종</span>
+              <div className="bg-white/70 backdrop-blur-xs rounded-xl p-2.5 border border-amber-200/60 text-center">
+                <span className="block font-black text-lg sm:text-xl text-stone-900">12대</span>
+                <span className="text-stone-600 text-xs">대표 고양이 묘종</span>
               </div>
-              <div className="bg-white/15 backdrop-blur-xs rounded-xl p-2.5 border border-white/20 text-center">
-                <span className="block font-black text-lg sm:text-xl">5개</span>
-                <span className="text-white/80 text-[11px]">놀이 마스터클래스</span>
+              <div className="bg-white/70 backdrop-blur-xs rounded-xl p-2.5 border border-amber-200/60 text-center">
+                <span className="block font-black text-lg sm:text-xl text-stone-900">5개</span>
+                <span className="text-stone-600 text-xs">놀이 마스터클래스</span>
               </div>
-              <div className="bg-white/15 backdrop-blur-xs rounded-xl p-2.5 border border-white/20 text-center">
-                <span className="block font-black text-lg sm:text-xl">30초</span>
-                <span className="text-white/80 text-[11px]">맞춤 놀이 진단</span>
+              <div className="bg-white/70 backdrop-blur-xs rounded-xl p-2.5 border border-amber-200/60 text-center">
+                <span className="block font-black text-lg sm:text-xl text-stone-900">30초</span>
+                <span className="text-stone-600 text-xs">맞춤 놀이 진단</span>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default function App() {
             onClick={() => setActiveTab('all')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 transition-all cursor-pointer ${
               activeTab === 'all'
-                ? 'bg-stone-900 text-white shadow-xs'
+                ? 'bg-amber-500 text-white shadow-xs'
                 : 'bg-white hover:bg-stone-100 text-stone-600 border border-stone-200'
             }`}
           >
@@ -210,7 +210,7 @@ export default function App() {
             onClick={() => setActiveTab('dog')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'dog'
-                ? 'bg-amber-600 text-white shadow-xs'
+                ? 'bg-amber-500 text-white shadow-xs'
                 : 'bg-white hover:bg-stone-100 text-stone-600 border border-stone-200'
             }`}
           >
@@ -222,7 +222,7 @@ export default function App() {
             onClick={() => setActiveTab('cat')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'cat'
-                ? 'bg-orange-600 text-white shadow-xs'
+                ? 'bg-amber-500 text-white shadow-xs'
                 : 'bg-white hover:bg-stone-100 text-stone-600 border border-stone-200'
             }`}
           >
@@ -234,7 +234,7 @@ export default function App() {
             onClick={() => setActiveTab('play')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'play'
-                ? 'bg-amber-800 text-white shadow-xs'
+                ? 'bg-amber-500 text-white shadow-xs'
                 : 'bg-white hover:bg-stone-100 text-stone-600 border border-stone-200'
             }`}
           >
@@ -258,7 +258,7 @@ export default function App() {
             onClick={() => setActiveTab('faq')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'faq'
-                ? 'bg-stone-800 text-white shadow-xs'
+                ? 'bg-amber-500 text-white shadow-xs'
                 : 'bg-white hover:bg-stone-100 text-stone-600 border border-stone-200'
             }`}
           >
@@ -280,19 +280,19 @@ export default function App() {
             {/* Special Feature Hub: Toys & Health Solutions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               {/* Card 1: Toys Showcase */}
-              <div className="bg-linear-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-4 text-white shadow-xs flex items-center justify-between gap-3">
+              <div className="bg-linear-to-r from-amber-100 via-orange-100 to-amber-200 border border-amber-200/70 rounded-2xl p-4 text-stone-900 shadow-xs flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span className="p-2.5 bg-white/20 rounded-xl backdrop-blur-xs">
-                    <Gamepad2 className="w-5 h-5 text-white" />
+                  <span className="p-2.5 bg-white/70 rounded-xl backdrop-blur-xs">
+                    <Gamepad2 className="w-5 h-5 text-amber-700" />
                   </span>
                   <div>
-                    <span className="text-[10px] font-bold bg-white/25 px-2 py-0.5 rounded-full">
+                    <span className="text-xs font-bold bg-white/70 text-amber-800 px-2 py-0.5 rounded-full">
                       체형 & 악력 맞춤 완구
                     </span>
-                    <h3 className="text-sm sm:text-base font-black mt-1">
+                    <h3 className="text-sm sm:text-base font-black mt-1 text-stone-900">
                       견종 · 묘종 맞춤 장난감 컬렉션
                     </h3>
-                    <p className="text-[11px] sm:text-xs text-amber-100 mt-0.5">
+                    <p className="text-xs text-stone-700 mt-0.5">
                       치아 안전과 이물 삼킴 방지 큐레이션 & 바로가기
                     </p>
                   </div>
@@ -307,19 +307,19 @@ export default function App() {
               </div>
 
               {/* Card 2: Health & Supplement Prescription */}
-              <div className="bg-linear-to-r from-teal-700 via-emerald-700 to-teal-800 rounded-2xl p-4 text-white shadow-xs flex items-center justify-between gap-3">
+              <div className="bg-linear-to-r from-teal-50 via-emerald-50 to-teal-100 border border-teal-200/70 rounded-2xl p-4 text-stone-900 shadow-xs flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span className="p-2.5 bg-white/20 rounded-xl backdrop-blur-xs">
-                    <Pill className="w-5 h-5 text-teal-100" />
+                  <span className="p-2.5 bg-white/70 rounded-xl backdrop-blur-xs">
+                    <Pill className="w-5 h-5 text-teal-700" />
                   </span>
                   <div>
-                    <span className="text-[10px] font-bold bg-white/25 px-2 py-0.5 rounded-full">
+                    <span className="text-xs font-bold bg-white/70 text-teal-800 px-2 py-0.5 rounded-full">
                       원인 분석 & 솔루션
                     </span>
-                    <h3 className="text-sm sm:text-base font-black mt-1">
+                    <h3 className="text-sm sm:text-base font-black mt-1 text-stone-900">
                       피부 · 눈 · 장 건강 & 영양제 · 유산균 추천
                     </h3>
-                    <p className="text-[11px] sm:text-xs text-teal-100 mt-0.5">
+                    <p className="text-xs text-stone-700 mt-0.5">
                       어떤 병에 왜 약한지 솔루션 + 효과 좋은 영양제 바로가기
                     </p>
                   </div>
@@ -327,7 +327,7 @@ export default function App() {
                 <button
                   id="hero-health-showcase-btn"
                   onClick={() => setSelectedHealthBreed(BREEDS_DATA[0])}
-                  className="px-3 py-2 bg-amber-400 hover:bg-amber-300 text-stone-900 rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 shadow-xs"
+                  className="px-3 py-2 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 shadow-xs"
                 >
                   처방전 보기 ↗
                 </button>
@@ -365,7 +365,7 @@ export default function App() {
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs">
                 {/* Size pills */}
                 <div className="flex items-center gap-1 bg-stone-100 p-1 rounded-xl">
-                  <span className="text-stone-400 px-1.5 text-[11px] font-medium">체급:</span>
+                  <span className="text-stone-400 px-1.5 text-xs font-medium">체급:</span>
                   {(['all', '소형', '중형', '대형'] as const).map((sz) => (
                     <button
                       key={sz}
@@ -383,7 +383,7 @@ export default function App() {
 
                 {/* Shedding pills */}
                 <div className="flex items-center gap-1 bg-stone-100 p-1 rounded-xl">
-                  <span className="text-stone-400 px-1.5 text-[11px] font-medium">털 빠짐:</span>
+                  <span className="text-stone-400 px-1.5 text-xs font-medium">털 빠짐:</span>
                   <button
                     onClick={() => setSheddingFilter('all')}
                     className={`px-2 py-1 rounded-lg font-medium transition-colors cursor-pointer ${
@@ -536,7 +536,7 @@ export default function App() {
               </div>
               <div>
                 <span className="font-extrabold text-stone-900 text-sm">펫피디아 (PetPedia)</span>
-                <p className="text-[11px] text-stone-500">
+                <p className="text-xs text-stone-500">
                   반려견 견종 & 반려묘 묘종 정보 포털 및 행동 놀이 가이드
                 </p>
               </div>
@@ -551,7 +551,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="text-[11px] text-stone-500 space-y-2 leading-relaxed">
+          <div className="text-xs text-stone-500 space-y-2 leading-relaxed">
             <p>
               <strong>SEO 정보 안내:</strong> 본 사이트는 말티즈, 푸들, 포메라니안, 비숑 프리제, 골든 리트리버, 웰시 코기, 시바견, 닥스훈트, 코리안 숏헤어, 러시안 블루, 랙돌, 브리티시 숏헤어, 페르시안, 샴 등 대표 품종의 특징과 털 빠짐, 유전병, 그리고 터그놀이, 노즈워크, 고양이 낚싯대 사냥놀이의 과학적 프로토콜을 체계적으로 제공합니다.
             </p>

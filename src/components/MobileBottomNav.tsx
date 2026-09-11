@@ -45,7 +45,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
                 <span className="absolute top-0 w-8 h-0.5 bg-orange-500 rounded-full" />
               )}
               <Icon className={`w-5 h-5 ${isActive ? 'stroke-[2.5]' : 'stroke-2'}`} />
-              <span className="text-[10px] tracking-tight">{tab.label}</span>
+              <span className="text-xs tracking-tight">{tab.label}</span>
             </button>
           );
         })}

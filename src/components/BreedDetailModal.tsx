@@ -135,7 +135,7 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
             >
               <Share2 className="w-4 h-4" />
               {copySuccess && (
-                <span className="absolute -bottom-8 right-0 text-[10px] bg-stone-800 text-white px-2 py-0.5 rounded shadow whitespace-nowrap">
+                <span className="absolute -bottom-8 right-0 text-xs bg-stone-800 text-white px-2 py-0.5 rounded shadow whitespace-nowrap">
                   링크 복사됨!
                 </span>
               )}
@@ -169,7 +169,7 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
                 }}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-2 left-2 right-2 flex justify-between text-[11px] bg-stone-900/70 text-white px-2.5 py-1 rounded-lg backdrop-blur-xs">
+              <div className="absolute bottom-2 left-2 right-2 flex justify-between text-xs bg-stone-900/70 text-white px-2.5 py-1 rounded-lg backdrop-blur-xs">
                 <span>원산지: {breed.origin}</span>
                 <span>체급: {breed.size}형</span>
               </div>
@@ -185,26 +185,26 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
 
               <p className="text-sm font-bold text-amber-700 mb-3">"{breed.tagline}"</p>
 
-              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base text-stone-600 leading-relaxed mb-4">
                 {breed.summary}
               </p>
 
               {/* Stat Chips */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
                 <div className="p-2 bg-stone-50 rounded-xl border border-stone-100">
-                  <span className="text-[10px] text-stone-500 block">평균 체중</span>
+                  <span className="text-xs text-stone-500 block">평균 체중</span>
                   <span className="font-bold text-stone-800">{breed.averageWeight}</span>
                 </div>
                 <div className="p-2 bg-stone-50 rounded-xl border border-stone-100">
-                  <span className="text-[10px] text-stone-500 block">평균 수명</span>
+                  <span className="text-xs text-stone-500 block">평균 수명</span>
                   <span className="font-bold text-stone-800">{breed.lifespan}</span>
                 </div>
                 <div className="p-2 bg-stone-50 rounded-xl border border-stone-100">
-                  <span className="text-[10px] text-stone-500 block">모질 유형</span>
+                  <span className="text-xs text-stone-500 block">모질 유형</span>
                   <span className="font-bold text-stone-800">{breed.coatType}모</span>
                 </div>
                 <div className="p-2 bg-stone-50 rounded-xl border border-stone-100">
-                  <span className="text-[10px] text-stone-500 block">아파트 적합도</span>
+                  <span className="text-xs text-stone-500 block">아파트 적합도</span>
                   <span className="font-bold text-amber-800">
                     {breed.apartmentFriendly ? '매우 적합' : '야외/마당 추천'}
                   </span>
@@ -257,7 +257,7 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
               {breed.keyFeatures.map((feat, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/50 border border-amber-100/80 text-xs sm:text-sm text-stone-800"
+                  className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/50 border border-amber-100/80 text-sm text-stone-800"
                 >
                   <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                   <span>{feat}</span>
@@ -283,7 +283,7 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-stone-700 font-medium mb-4 leading-relaxed">
+            <p className="text-sm sm:text-base text-stone-700 font-medium mb-4 leading-relaxed">
               {breed.play.description}
             </p>
 
@@ -363,7 +363,7 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
                 <ShieldAlert className="w-4 h-4 text-rose-600" />
                 조심해야 할 사항 & 건강 취약점 (피부 · 눈 · 장 · 관절)
               </h3>
-              <span className="text-[11px] text-stone-500 font-medium">원인 분석 & 솔루션 처방</span>
+              <span className="text-xs text-stone-500 font-medium">원인 분석 & 솔루션 처방</span>
             </div>
 
             <div className="flex flex-wrap gap-2">
@@ -387,28 +387,28 @@ export const BreedDetailModal: React.FC<BreedDetailModalProps> = ({
               <button
                 id="detail-modal-to-health-btn"
                 onClick={() => onOpenHealthModal(breed)}
-                className="w-full inline-flex items-center justify-between p-3.5 bg-linear-to-r from-teal-700 via-emerald-700 to-teal-800 hover:from-teal-800 hover:to-emerald-800 text-white rounded-xl shadow-xs transition-all cursor-pointer group"
+                className="w-full inline-flex items-center justify-between p-3.5 bg-linear-to-r from-teal-50 via-emerald-50 to-teal-100 hover:from-teal-100 hover:to-emerald-100 border border-teal-200/70 text-stone-900 rounded-xl shadow-xs transition-all cursor-pointer group"
               >
                 <div className="flex items-center gap-2.5">
-                  <span className="p-2 bg-white/20 rounded-xl backdrop-blur-xs">
-                    <Pill className="w-4 h-4 text-white" />
+                  <span className="p-2 bg-white/70 rounded-xl backdrop-blur-xs">
+                    <Pill className="w-4 h-4 text-teal-700" />
                   </span>
                   <div className="text-left">
-                    <div className="text-xs sm:text-sm font-black tracking-tight">
+                    <div className="text-sm font-black tracking-tight text-stone-900">
                       {breed.nameKo} 건강 설명·솔루션 & 맞춤 영양제·유산균 추천 보러가기
                     </div>
-                    <div className="text-[11px] text-teal-100 mt-0.5">
+                    <div className="text-xs text-teal-800 mt-0.5">
                       어떤 병에 왜 걸리는지 원인과 솔루션 + 하단 효과 좋은 영양제 추천 바로가기
                     </div>
                   </div>
                 </div>
-                <ChevronRight className="w-5 h-5 text-teal-200 group-hover:translate-x-1 transition-transform shrink-0" />
+                <ChevronRight className="w-5 h-5 text-teal-600 group-hover:translate-x-1 transition-transform shrink-0" />
               </button>
             )}
           </section>
 
           {/* Section 5: Curator Tip */}
-          <section className="bg-amber-100/50 border border-amber-200 rounded-2xl p-4 text-xs sm:text-sm text-stone-800">
+          <section className="bg-amber-100/50 border border-amber-200 rounded-2xl p-4 text-sm text-stone-800">
             <div className="font-bold text-amber-900 mb-1 flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-amber-600" />
               전문 큐레이터의 현실 입양 & 양육 조언

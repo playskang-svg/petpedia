@@ -100,7 +100,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
               >
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <span
-                    className={`inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                    className={`inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full ${
                       guide.targetSpecies === 'dog'
                         ? 'bg-amber-100 text-amber-800'
                         : guide.targetSpecies === 'cat'
@@ -113,7 +113,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
                     {guide.targetSpecies === 'both' && <Shield className="w-3 h-3" />}
                     {guide.targetSpecies === 'dog' ? '강아지' : guide.targetSpecies === 'cat' ? '고양이' : '공통 가이드'}
                   </span>
-                  <span className="text-[11px] text-stone-500 font-medium">{guide.duration}</span>
+                  <span className="text-xs text-stone-500 font-medium">{guide.duration}</span>
                 </div>
 
                 <h4 className="text-sm font-bold text-stone-900 leading-snug mb-1">
@@ -148,7 +148,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
                 <span className="text-xs font-bold text-stone-900 block mb-1">
                   💡 왜 이 놀이가 반려동물에게 필수적일까요?
                 </span>
-                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
                   {activeGuide.whyImportant}
                 </p>
               </div>
@@ -164,7 +164,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
                 {activeGuide.stepByStep.map((step, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-2xl bg-amber-50/40 border border-amber-100/80 flex items-start gap-3 text-xs sm:text-sm text-stone-800"
+                    className="p-3.5 rounded-2xl bg-amber-50/40 border border-amber-100/80 flex items-start gap-3 text-sm text-stone-800"
                   >
                     <span className="w-6 h-6 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
                       {idx + 1}
@@ -183,7 +183,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
               </h4>
               <ul className="space-y-1.5">
                 {activeGuide.goldenRules.map((rule, idx) => (
-                  <li key={idx} className="text-xs sm:text-sm text-emerald-900 flex items-start gap-2">
+                  <li key={idx} className="text-sm text-emerald-900 flex items-start gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{rule}</span>
                   </li>
@@ -199,7 +199,7 @@ export const PlayGuideSection: React.FC<PlayGuideSectionProps> = () => {
               </h4>
               <ul className="space-y-1.5">
                 {activeGuide.dangerWarnings.map((warn, idx) => (
-                  <li key={idx} className="text-xs sm:text-sm text-rose-900 flex items-start gap-2">
+                  <li key={idx} className="text-sm text-rose-900 flex items-start gap-2">
                     <span className="text-rose-500 font-bold">•</span>
                     <span>{warn}</span>
                   </li>

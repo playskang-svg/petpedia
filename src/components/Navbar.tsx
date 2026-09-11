@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             role="button"
             tabIndex={0}
           >
-            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white shadow-sm shadow-orange-200 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white shadow-sm shadow-amber-100 group-hover:scale-105 transition-transform">
               <PawPrint className="w-6 h-6" />
             </div>
             <div>
@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   백과 & 놀이
                 </span>
               </span>
-              <p className="text-[11px] text-stone-500 hidden sm:block">반려견·반려묘 품종 & 맞춤 놀이 가이드</p>
+              <p className="text-xs text-stone-500 hidden sm:block">반려견·반려묘 품종 & 맞춤 놀이 가이드</p>
             </div>
           </div>
 
@@ -177,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Bookmark className="w-5 h-5" />
               {bookmarkCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow-xs">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-xs">
                   {bookmarkCount}
                 </span>
               )}
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Share2 className="w-5 h-5" />
               {isCopied && (
-                <span className="absolute -bottom-8 right-0 text-[11px] bg-stone-800 text-white px-2 py-0.5 rounded shadow-sm whitespace-nowrap z-50">
+                <span className="absolute -bottom-8 right-0 text-xs bg-stone-800 text-white px-2 py-0.5 rounded shadow-sm whitespace-nowrap z-50">
                   링크 복사 완료!
                 </span>
               )}
