@@ -12,6 +12,9 @@ import { BreedComparisonModal } from './components/BreedComparisonModal';
 import { SEOFAQSection } from './components/SEOFAQSection';
 import { BookmarksDrawer } from './components/BookmarksDrawer';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { BlogListPage } from './components/BlogListPage';
+import { BlogPostPage } from './components/BlogPostPage';
+import { useRoute } from './hooks/useRoute';
 import {
   PawPrint,
   Dog,
@@ -27,9 +30,13 @@ import {
   CheckCircle2,
   Gamepad2,
   Pill,
+  Newspaper,
 } from 'lucide-react';
 
 export default function App() {
+  // URL-based routing (blog only — the rest of the app stays tab/state driven)
+  const { path, navigate } = useRoute();
+
   // Navigation & View state
   const [activeTab, setActiveTab] = React.useState<'all' | 'dog' | 'cat' | 'play' | 'quiz' | 'faq'>('all');
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -121,12 +128,20 @@ export default function App() {
     });
   }, [activeTab, searchQuery, selectedSize, sheddingFilter, onlyApartment, onlyBeginner, sortBy]);
 
+  // 블로그(/blog, /blog/:slug)에 있는 상태에서 상단 네비게이션·하단 탭을 누르면
+  // 먼저 홈(/)으로 돌아온 다음 해당 탭을 활성화한다. 그냥 setActiveTab만 부르면
+  // activeTab은 바뀌어도 path가 그대로라 화면이 안 바뀌는 것처럼 보이는 문제가 있다.
+  const handleTabChange = (tab: 'all' | 'dog' | 'cat' | 'play' | 'quiz' | 'faq') => {
+    if (path !== '/') navigate('/');
+    setActiveTab(tab);
+  };
+
   return (
     <div className="min-h-screen bg-stone-50/50 flex flex-col text-stone-800 pb-20 lg:pb-0">
       {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={handleTabChange}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         bookmarkCount={bookmarkedIds.length}
@@ -136,6 +151,24 @@ export default function App() {
 
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+        {path === '/blog' ? (
+          <>
+            <nav aria-label="Breadcrumb" className="text-xs text-stone-500 mb-4 flex items-center gap-1.5">
+              <span className="hover:text-stone-800 cursor-pointer" onClick={() => navigate('/')}>홈</span>
+              <span>&gt;</span>
+              <span className="font-semibold text-stone-800">블로그</span>
+            </nav>
+            <BlogListPage onSelectPost={(slug) => navigate(`/blog/${slug}`)} />
+          </>
+        ) : path.startsWith('/blog/') ? (
+          <BlogPostPage
+            slug={path.slice('/blog/'.length)}
+            onSelectPost={(slug) => navigate(`/blog/${slug}`)}
+            onGoToList={() => navigate('/blog')}
+            onGoHome={() => navigate('/')}
+          />
+        ) : (
+        <>
         {/* SEO Breadcrumbs */}
         <nav aria-label="Breadcrumb" className="text-xs text-stone-500 mb-4 flex items-center gap-1.5">
           <span className="hover:text-stone-800 cursor-pointer" onClick={() => setActiveTab('all')}>홈</span>
@@ -264,6 +297,14 @@ export default function App() {
           >
             <HelpCircle className="w-4 h-4" />
             자주 묻는 질문
+          </button>
+          <button
+            id="tab-btn-blog"
+            onClick={() => navigate('/blog')}
+            className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-1.5 transition-all cursor-pointer bg-white hover:bg-stone-100 text-stone-600 border border-stone-200"
+          >
+            <Newspaper className="w-4 h-4" />
+            블로그
           </button>
         </div>
 
@@ -524,6 +565,8 @@ export default function App() {
             </div>
           </div>
         )}
+        </>
+        )}
       </main>
 
       {/* Semantic Footer with SEO summary */}
@@ -548,6 +591,7 @@ export default function App() {
               <button onClick={() => setActiveTab('play')} className="hover:text-stone-900">놀이 가이드</button>
               <button onClick={() => setActiveTab('quiz')} className="hover:text-stone-900">맞춤 진단</button>
               <button onClick={() => setActiveTab('faq')} className="hover:text-stone-900">FAQ</button>
+              <button onClick={() => navigate('/blog')} className="hover:text-stone-900">블로그</button>
             </div>
           </div>
 
@@ -606,7 +650,7 @@ export default function App() {
       />
 
       {/* Mobile Sticky Bottom Nav Bar */}
-      <MobileBottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      <MobileBottomNav activeTab={activeTab} setActiveTab={handleTabChange} />
     </div>
   );
 }
