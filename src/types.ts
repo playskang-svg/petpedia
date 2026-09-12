@@ -106,3 +106,30 @@ export interface BreedHealthProfile {
   recommendedSupplements: SupplementItem[];
   toys: ToyItem[];
 }
+
+export interface BlogPostSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+/**
+ * 블로그 글 하나 = 실제 URL(/blog/{slug})을 갖는 독립 웹페이지.
+ * title/metaDescription/keywords는 <head> 메타태그와 JSON-LD 생성에 그대로 쓰이므로
+ * 이 파일은 순수 데이터만 담고 React/DOM에 의존하지 않아야 한다 —
+ * worker/index.js(서버사이드 메타태그 주입)에서도 그대로 import 하기 때문.
+ */
+export interface BlogPost {
+  slug: string;
+  title: string;
+  category: 'dog' | 'cat' | 'both';
+  categoryLabel: string;
+  publishDate: string; // ISO, e.g. "2026-09-12"
+  updatedDate?: string;
+  readingMinutes: number;
+  keywords: string[];
+  metaDescription: string; // 150~160자 내외, 검색결과 스니펫용
+  excerpt: string; // 목록 카드용 짧은 요약
+  coverEmoji: string;
+  sections: BlogPostSection[];
+  relatedBreedIds?: string[];
+}
