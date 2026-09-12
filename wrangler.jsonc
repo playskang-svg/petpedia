@@ -1,0 +1,8 @@
+{
+  // Static site — no Worker script needed. Vite builds to ./dist.
+  "name": "petpedia",
+  "compatibility_date": "2026-09-12",
+  "assets": {
+    "directory": "./dist"
+  }
+}
